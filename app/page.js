@@ -1,134 +1,145 @@
-import Head from "next/head";
-import Image from "next/image";
+export default function StudentTable() {
+	const students = [
+		{
+			no: 1,
+			nim: "12345678",
+			nama: "Budi Santoso",
+			gender: "Laki-laki",
+			prodi: "Informatika",
+			kelas: "TI-1A",
+			semester: 2,
+			alamat: "Jl. Merdeka No.10",
+			hobby: "Membaca",
+			citaCita: "Programmer",
+		},
+		{
+			no: 2,
+			nim: "87654321",
+			nama: "Siti Aisyah",
+			gender: "Perempuan",
+			prodi: "Sistem Informasi",
+			kelas: "SI-1B",
+			semester: 2,
+			alamat: "Jl. Sudirman No.20",
+			hobby: "Menulis",
+			citaCita: "Data Scientist",
+		},
+		{
+			no: 3,
+			nim: "872424321",
+			nama: "Abdul Aziz",
+			gender: "Laki-laki",
+			prodi: "Sistem Informasi",
+			kelas: "SI-1B",
+			semester: 2,
+			alamat: "Jl. Sudirman No.20",
+			hobby: "mengkritik kebijakan pemerintah",
+			citaCita: "Presiden",
+		},
+	];
 
-export default function Home() {
 	return (
-		<div className="bg-gray-50 text-gray-900">
-			<Head>
-				<title>CV Online - Next.js</title>
-				<meta
-					name="description"
-					content="CV Online menggunakan Next.js"
-				/>
-			</Head>
-
-			{/* Hero Section */}
-			<section className="bg-gray-900 text-white text-center py-10">
-				<Image
-					src="/IMG_7441.jpg"
-					alt="Profile Picture"
-					width={150}
-					height={150}
-					className="rounded-full mx-auto border-1 border-white shadow-lg"
-				/>
-				<h1 className="text-3xl font-extrabold mt-4">
-					Yogi Tri Dirgantara
-				</h1>
-				<p className="text-lg mt-2 opacity-80">
-					Junior Graphic Designer & UI/UX Designer
-				</p>
-			</section>
-
-			{/* About Section */}
-			<section className="max-w-4xl mx-auto p-10">
-				<h2 className="text-3xl font-bold mb-4 border-b-4 border-gray-800 inline-block">
-					About Me
-				</h2>
-				<p className="text-lg text-gray-700 leading-relaxed">
-					Saya adalah seorang pengembang web dengan pengalaman
-					dalam Next.js, React, dan teknologi lainnya. Saya juga
-					seorang design graphics dan UI/UX Design.
-				</p>
-			</section>
-
-			{/* Skills Section */}
-			<section className="bg-gray-800 text-white p-10">
-				<div className="max-w-4xl mx-auto">
-					<h2 className="text-3xl font-bold mb-4 border-b-4 border-white inline-block">
-						Skills
-					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-						<div className="bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-600 transition duration-300">
-							💻{" "}
-							<span className="font-semibold">
-								Programming Web
-							</span>
-						</div>
-						<div className="bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-600 transition duration-300">
-							🎨{" "}
-							<span className="font-semibold">
-								UI/UX Design
-							</span>
-						</div>
-						<div className="bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-600 transition duration-300">
-							🖼️{" "}
-							<span className="font-semibold">
-								Graphic Design
-							</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Services Section */}
-			<section className="max-w-4xl mx-auto p-10">
-				<h2 className="text-3xl font-bold mb-4 border-b-4 border-gray-800 inline-block">
-					Services
-				</h2>
-				<ul className="space-y-2">
-					<li className="bg-gray-100 p-4 rounded-lg shadow-md">
-						🔹 Web Development
-					</li>
-					<li className="bg-gray-100 p-4 rounded-lg shadow-md">
-						🔹 UI/UX Design
-					</li>
-					<li className="bg-gray-100 p-4 rounded-lg shadow-md">
-						🔹 Design Graphics
-					</li>
-				</ul>
-			</section>
-
-			{/* Portfolio Section */}
-			<section className="bg-gray-100 p-10">
-				<div className="max-w-4xl mx-auto">
-					<h2 className="text-3xl font-bold mb-4 border-b-4 border-gray-800 inline-block">
-						Portfolio
-					</h2>
-					<p className="text-lg text-gray-700 leading-relaxed">
-						Beberapa proyek yang telah saya buat.
-					</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-						<div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-							<h3 className="font-semibold">Project 1</h3>
-							<p className="text-sm text-gray-600">
-								Deskripsi singkat proyek.
-							</p>
-						</div>
-						<div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-							<h3 className="font-semibold">Project 2</h3>
-							<p className="text-sm text-gray-600">
-								Deskripsi singkat proyek.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Contact Section */}
-			<section className="max-w-4xl mx-auto p-10 text-center">
-				<h2 className="text-3xl font-bold mb-4 border-b-4 border-gray-800 inline-block">
-					Contact
-				</h2>
-				<p className="text-lg text-gray-700 leading-relaxed mt-4">
-					Email:{" "}
-					<a
-						href="mailto:yogitridirgantaraa@gmail.com"
-						className="text-blue-600 font-semibold hover:underline"
+		<div className="max-w-screen-xl mx-auto p-4">
+			<h1 className="text-lg font-bold text-center mb-4">
+				Data Mahasiswa
+			</h1>
+			<div className="hidden lg:block overflow-x-auto rounded-md">
+				<table className="w-full border border-black text-sm rounded-md">
+					<thead>
+						<tr className="bg-gray-200 text-gray-700">
+							<th className="border p-2">No</th>
+							<th className="border p-2">NIM</th>
+							<th className="border p-2">Nama</th>
+							<th className="border p-2">Gender</th>
+							<th className="border p-2">Prodi</th>
+							<th className="border p-2">Kelas</th>
+							<th className="border p-2">Semester</th>
+							<th className="border p-2">Alamat</th>
+							<th className="border p-2">Hobby</th>
+							<th className="border p-2">Cita-cita</th>
+						</tr>
+					</thead>
+					<tbody>
+						{students.map((student) => (
+							<tr
+								key={student.no}
+								className="text-center text-black"
+							>
+								<td className="border p-2 bg-gray-100">
+									{student.no}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.nim}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.nama}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.gender}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.prodi}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.kelas}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.semester}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.alamat}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.hobby}
+								</td>
+								<td className="border p-2 bg-gray-100">
+									{student.citaCita}
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+			<div className="lg:hidden grid grid-cols-1 gap-4">
+				{students.map((student) => (
+					<div
+						key={student.no}
+						className="border p-4 rounded-md shadow-sm bg-gray-50 text-black"
 					>
-						yogitridirgantaraa@gmail.com
-					</a>
-				</p>
-			</section>
+						<p>
+							<strong>No:</strong> {student.no}
+						</p>
+						<p>
+							<strong>NIM:</strong> {student.nim}
+						</p>
+						<p>
+							<strong>Nama:</strong> {student.nama}
+						</p>
+						<p>
+							<strong>Gender:</strong> {student.gender}
+						</p>
+						<p>
+							<strong>Prodi:</strong> {student.prodi}
+						</p>
+						<p>
+							<strong>Kelas:</strong> {student.kelas}
+						</p>
+						<p>
+							<strong>Semester:</strong> {student.semester}
+						</p>
+						<p>
+							<strong>Alamat:</strong> {student.alamat}
+						</p>
+						<p>
+							<strong>Hobby:</strong> {student.hobby}
+						</p>
+						<p>
+							<strong>Cita-Cita:</strong>{" "}
+							{student.citaCita}
+						</p>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 }
